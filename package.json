@@ -10,6 +10,10 @@
   "categories": [
     "Other"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Treadder/comment-annihilator-3000"
+  },
   "activationEvents": [
     "onCommand:comment-annihilator-3000.removeComments"
   ],
