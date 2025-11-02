@@ -2,7 +2,7 @@
   "name": "comment-annihilator-3000",
   "displayName": "Comment Annihilator 3000",
   "description": "Removes all single-line comments in a document while preserving URLs.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "JaredKelnhofer",
   "engines": {
     "vscode": "^1.104.0" 
@@ -10,6 +10,7 @@
   "categories": [
     "Other"
   ],
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/Treadder/comment-annihilator-3000"
