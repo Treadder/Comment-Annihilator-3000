@@ -1,0 +1,38 @@
+{
+  "name": "comment-annihilator-3000",
+  "displayName": "Comment Annihilator 3000",
+  "description": "Removes all single-line comments in a document while preserving URLs.",
+  "version": "0.0.1",
+  "publisher": "YourPublisherName",
+  "engines": {
+    "vscode": "^1.104.0" 
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:comment-annihilator-3000.removeComments"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "comment-annihilator-3000.removeComments",
+        "title": "Annihilate All Single-Line Comments (Excluding URLs)"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "echo 'No compilation needed for pure JS'",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.104.0",
+    "eslint": "^8.0.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
