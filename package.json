@@ -1,8 +1,8 @@
 {
   "name": "comment-annihilator-3000",
   "displayName": "Comment Annihilator 3000",
-  "description": "Removes all single-line comments in a document while preserving URLs.",
-  "version": "0.0.2",
+  "description": "Removes all single-line comments in a document",
+  "version": "0.0.3",
   "publisher": "JaredKelnhofer",
   "engines": {
     "vscode": "^1.104.0" 
@@ -23,7 +23,7 @@
     "commands": [
       {
         "command": "comment-annihilator-3000.removeComments",
-        "title": "Annihilate All Single-Line Comments (Excluding URLs)"
+        "title": "Annihilate Comments"
       }
     ]
   },

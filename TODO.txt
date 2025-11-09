@@ -1,3 +1,4 @@
 [ ] - Add test files with expected outputs and automated testing
+[ ] - Bring back url string protection
 [ ] - Add support for html comments like <!--, {<!-- }, {/* } with various frontend frameworks
 [ ] - Add a generic pass that searches for unterminated multiline comments and throws a warning

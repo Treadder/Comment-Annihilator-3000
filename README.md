@@ -1,39 +1,24 @@
-# 💥 Comment Annihilator 3000 💥
+## 💥 Comment Annihilator 3000 💥
 
-## Clean Code, Zero Effort.
-
-This extension provides a powerful, single-command utility to aggressively **remove all single-line comments (`//`)** from your active file, ensuring your code remains clean and compact.
+This extension provides a powerful, single-command utility to aggressively remove **single-line** and **multi-line** comments from your active file, followed by blank line cleanup.
 
 ---
 
-### ✨ Features
+### ✨ Features & Supported Languages
 
-The Annihilator uses precise regex logic to handle two scenarios flawlessly:
+- **Fast and Local:** Comment Annihilator 3000 uses fast regex logic to find and remove comments across the entire document.
+- **Aggressive Removal:** Comments are replaced with an **empty string**.
+- **Blank Line Cleanup:** After comment removal, all occurrences of **two or more consecutive blank lines** are condensed down to one, and any blank lines at the start of the file are removed.
 
-- **Full-Line Comment Removal:** If a line contains only a comment (with optional indentation), the entire line is deleted, collapsing the space.
-
-  - **Before:**
-    ```javascript
-    // This entire line will vanish
-    var x = 1;
-    ```
-  - **After:**
-    ```javascript
-    var x = 1;
-    ```
-
-- **Inline Comment Deletion:** If a line contains code followed by a comment, only the comment (and the preceding whitespace) is removed. The code and its line break are preserved.
-
-  - **Before:**
-    ```javascript
-    var x = 1; // This part is deleted
-    ```
-  - **After:**
-    ```javascript
-    var x = 1;
-    ```
-
-- **URL Protection:** The extension will **never remove `//`** if it is preceded by a colon (`:`), protecting links in your code like `https://example.com//path`.
+| Language       | Single-Line Supported | Multi-Line Supported | Notes                                                                 |
+| :------------- | :-------------------- | :------------------- | :-------------------------------------------------------------------- |
+| **JavaScript** | ✅                    | ✅                   | Expects multiline comments to be terminated. Might break URL strings. |
+| **TypeScript** | ✅                    | ✅                   | Expects multiline comments to be terminated. Might break URL strings. |
+| **C#**         | ✅                    | ✅                   | Expects multiline comments to be terminated. Might break URL strings. |
+| **Python**     | ✅                    | ✅                   | Expects multiline comments to be terminated.                          |
+| **HTML**       | ❌                    | ❌                   | Not supported, Coming soon                                            |
+| **React**      | ✅ / ❌               | ✅ / ❌              | Untested, coming soon                                                 |
+| **Vue**        | ✅ / ❌               | ✅ / ❌              | Untested, coming soon                                                 |
 
 ---
 
@@ -41,13 +26,17 @@ The Annihilator uses precise regex logic to handle two scenarios flawlessly:
 
 1.  Open the file you wish to clean.
 2.  Open the **Command Palette** (`Ctrl+Shift+P` or `Cmd+Shift+P`).
-3.  Search for: `Annihilate All Single-Line Comments (Excluding URLs)`
+3.  Search for: `Annihilate Comments`
 4.  Execute the command. Your file is instantly cleaned!
+5.  Pro tip: if you use the command a lot, it's as fast as `Ctrl+Shift+P+Enter` as your most-used commands are automaticall suggested by VS Code.
 
 ### Limitations
 
-1. Expects your multiline comments to be formatted properly. If you have an unterminated `/*` in a C# file you might get wonky results when running this.
+1.  **Multiline Comment Formatting:** Expects your multiline comments to be formatted properly. If you have an unterminated `/*` (or `"""`) in a file, you might get wonky results when running this.
+2.  **String wierdness:** There's bound to be edge cases with URL strings, etc. Feel free to open a PR or email me if you find a bug!
+
+---
 
 ### Resources
 
-1. https://regexr.com/ is super helpful for working on the logic for this thing
+1.  https://regexr.com/ was super helpful for working on the logic for this thing

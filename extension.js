@@ -13,7 +13,7 @@ const _supportedLanguages = {
     },
     python: {
         name: 'python',
-        singleLineCommentDetectingRegex: /(?<!['"])(#.*$)/gm, /* the text from any # to the next newline or EOF */
+        singleLineCommentDetectingRegex: /(?<!['"])(#.*$)/gm, /* the text from any # to the next newline or EOF (ignores if preceded by a quote) */
         multiLineCommentDetectingRegex: /"""([\s\S]*?)"""/g   /* the text between any sets of """. Using lazy matching, some bugs if unterminated. */
     },
     csharp: {
