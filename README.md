@@ -1,5 +1,7 @@
 ## 💥 Comment Annihilator 3000 💥
 
+[VsCodeListing.png](VsCodeListing.png)
+
 This extension provides a powerful, single-command utility to aggressively remove **single-line** and **multi-line** comments from your active file, followed by blank line cleanup. The idea is to reduce the time we spend saying, "_Hey AI get rid of these comments_", because this is way more efficient. I wrote an article about it [here](https://www.linkedin.com/pulse/i-built-tool-do-something-ai-already-does-seconds-heres-kelnhofer-pqyoc).
 
 ---
