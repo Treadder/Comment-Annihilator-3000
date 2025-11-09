@@ -40,3 +40,18 @@ This extension provides a powerful, single-command utility to aggressively remov
 ### Resources
 
 1.  https://regexr.com/ was super helpful for working on the logic for this thing
+
+### Developing and running locally (note to self)
+
+- Docs [here](https://code.visualstudio.com/api/get-started/your-first-extension)
+- Install these: `npm install --global yo generator-code`
+- Run `yo code` (this is not a salutation to the editor, it's a scaffold command)
+- Go through the startup wizard to init a project
+- Inside the editor, open `src/extension.ts` and press F5 or run the command **Debug: Start Debugging** from the Command Palette
+
+### Deploying updates (note to self)
+
+- Get an Azure DevOps organization set up if not already done. Get a personal access token. Info [here](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#publishing-extensions)
+- `$ npm install -g vsce`
+- `$ vsce login <Publisher Name>` --> enter token (publisher name is in the package.json, note that there is a human-readable version, and a machine version).
+- To publish again change version number in package.json and let 'er rip with `$ vsce publish`
